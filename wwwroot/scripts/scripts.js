@@ -1,23 +1,22 @@
 ﻿$(document).ready(function () {
-$("#btn1").click(function (e) {
+$("#btn1").click(function () {
     //Declares all variables
     let afVals = [];
     let fTotalGPA;
     let sletGrade;
-    let bItWorked = false;
+
 
     // Gets all the user input from the input boxes, checks if the value is null
     // if the vallue is null, tell the user they need to input a percentage in all of the boxes.
   
-    afVals.push($("#assignment").val()) 
-    afVals.push($("#group").val())
-    afVals.push($("#quiz").val())
-    afVals.push($("#exam").val())
-    afVals.push($("#intex").val())
+    afVals.push(parseInt($("#assignment").val()));
+    afVals.push(parseInt($("#group").val()));
+    afVals.push(parseInt($("#quiz").val()));
+    afVals.push(parseInt($("#exam").val()));
+    afVals.push(parseInt($("#intex").val()));
 
 
     // if getting input from the user worked runs the rest of the program
-    if (bItWorked == true) {
         fTotalGPA = totalPerct(afVals);
         fTotalGPA = round(fTotalGPA, 2);
         sletGrade = convertToletter(fTotalGPA)
@@ -28,7 +27,6 @@ $("#btn1").click(function (e) {
         //outputs the final precentage and letter grade for the user to view
         document.getElementById("results").innerHTML = "Your final percentage is " + fTotalGPA.toFixed(2) + " and your letter grade is " + sletGrade;
         alert("Your final percentage is " + fTotalGPA.toFixed(2) + " and your letter grade is " + sletGrade);
-    }
 });
 
 
@@ -149,9 +147,3 @@ and shows some info about the webage to the user
 
 
 });
-
-function onLoad() {
-    $("assignment").focus();
-    $("results").innerhtml = ("input your grade percentages into the calculator and " +
-        "then click the \"calculate\" button to display your final percentage and letter grade results here");
-}

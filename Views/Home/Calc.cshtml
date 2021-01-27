@@ -7,7 +7,7 @@
 
 @model Assignment_2_Josiah_Sarles.Models.CalcModel 
 
-<body onload="onLoad()">
+<body>
     <div class="content row">
         <div class="column">
             <div class="pad">
@@ -18,29 +18,29 @@
             <div class="pad ex_pad">
                 <h2>Grade Calculator</h2>
                 <form method="post">
-                    <label for="">Assignments:</label>
-                    <input type="number" asp-for="assignment" id="assignment" class="input" required>
-                    <label for="">/50%</label>
+                    <label>Assignments:</label>
+                    <input asp-for="assignment" id="assignment" class="input">
+                    <label>/50%</label>
                     <br><br>
 
-                    <label for="">Group Projects:</label>
-                    <input type="number" asp-for="group" id="group" class="input" required>
-                    <label for="">/10%</label>
+                    <label>Group Projects:</label>
+                    <input asp-for="group" id="group" class="input">
+                    <label>/10%</label>
                     <br><br>
 
-                    <label for="">Quizzez:</label>
-                    <input type="number" asp-for="quiz" id="quiz" class="input" required onkeypress="">
-                    <label for="">/10%</label>
+                    <label>Quizzez:</label>
+                    <input asp-for="quiz" id="quiz" class="input">
+                    <label>/10%</label>
                     <br><br>
 
-                    <label for="">Exams:</label>
-                    <input type="number" asp-for="exam" id="exam" class="input" required>
-                    <label for="">/20%</label>
+                    <label>Exams:</label>
+                    <input asp-for="exam" id="exam" class="input">
+                    <label>/20%</label>
                     <br><br>
 
-                    <label for="">INTEX:</label>
-                    <input type="number" asp-for="intex" id="intex" class="input" required>
-                    <label for="">/10%</label>
+                    <label>INTEX:</label>
+                    <input asp-for="intex" id="intex" class="input">
+                    <label>/10%</label>
                     <br><br>
 
                     <input type="submit" id="btn1" value="CALCULATE"><br><br>
