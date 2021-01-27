@@ -1,7 +1,6 @@
 ﻿$(document).ready(function () {
 $("#btn1").click(function (e) {
     //Declares all variables
-    let asCats = ["assignment", "group", "quiz", "exam", "intex"]
     let afVals = [];
     let fTotalGPA;
     let sletGrade;
@@ -10,12 +9,12 @@ $("#btn1").click(function (e) {
     // Gets all the user input from the input boxes, checks if the value is null
     // if the vallue is null, tell the user they need to input a percentage in all of the boxes.
   
-    for (let i = 0; i < asCats.length; i++) {
-        if (document.getElementById(asCats[i]).value != "") {
-            afVals.push(parseInt(document.getElementById(asCats[i]).value));
-            bItWorked = true;
-        }
-    }
+    afVals.push($("#assignment").val()) 
+    afVals.push($("#group").val())
+    afVals.push($("#quiz").val())
+    afVals.push($("#exam").val())
+    afVals.push($("#intex").val())
+
 
     // if getting input from the user worked runs the rest of the program
     if (bItWorked == true) {
@@ -139,7 +138,6 @@ $("#resetbtn").click(function () {
     for (let i = 0; i < asCats.length; i++) {
         document.getElementById(asCats[i]).value = "";
     }
-
     $("assignment").focus();
 });
 

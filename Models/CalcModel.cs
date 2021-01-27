@@ -10,27 +10,27 @@ namespace Assignment_2_Josiah_Sarles.Models
     {
         [Required]
 
-        [Range(0, 100, ErrorMessage = "Percentage must be between $0 and $100")]
+        [Range(0, 100, ErrorMessage = "Input must be between 0 and 100")]
         public int assignment { get; set; }
 
         [Required]
 
-        [Range(0, 100, ErrorMessage = "Percentage must be between $0 and $100")]
+        [Range(0, 100, ErrorMessage = "Input must be between 0 and 100")]
         public int group { get; set; }
 
         [Required]
 
-        [Range(0, 100, ErrorMessage = "Percentage must be between $0 and $100")]
+        [Range(0, 100, ErrorMessage = "Input must be between 0 and 100")]
         public int quiz { get; set; }
 
         [Required]
 
-        [Range(0, 100, ErrorMessage = "Percentage must be between $0 and $100")]
+        [Range(0, 100, ErrorMessage = "Input must be between 0 and 100")]
         public int exam { get; set; }
 
         [Required]
 
-        [Range(0, 100, ErrorMessage = "Percentage must be between $0 and $100")]
+        [Range(0, 100, ErrorMessage = "Input must be between 0 and 100")]
         public int intex { get; set; }
     }
 }
