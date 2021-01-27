@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Assignment_2_Josiah_Sarles.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Assignment_1_Josiah_Sarles.Controllers
+
+namespace Assignment_2_Josiah_Sarles.Controllers
 {
     public class HomeController : Controller
     {
@@ -12,7 +14,15 @@ namespace Assignment_1_Josiah_Sarles.Controllers
         {
             return View();
         }
+
+        [HttpGet("Calc")]
         public IActionResult Calc()
+        {
+            return View();
+        }
+
+        [HttpPost("Calc")]
+        public IActionResult Calc(CalcModel model)
         {
             return View();
         }

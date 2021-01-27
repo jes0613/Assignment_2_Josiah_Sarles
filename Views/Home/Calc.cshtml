@@ -4,6 +4,9 @@
 @{
     ViewBag.Title = "Grade Calculator: IS 413";
 }
+
+@model Assignment_2_Josiah_Sarles.Models.CalcModel 
+
 <body onload="onLoad()">
     <div class="content row">
         <div class="column">
@@ -14,34 +17,37 @@
         <div class="column">
             <div class="pad ex_pad">
                 <h2>Grade Calculator</h2>
-                <form>
+                <form method="post">
                     <label for="">Assignments:</label>
-                    <input type="number" name="assignment" id="assignment" class="input" required>
+                    <input type="number" asp-for="assignment" id="assignment" class="input" required>
                     <label for="">/50%</label>
                     <br><br>
 
                     <label for="">Group Projects:</label>
-                    <input type="number" name="group" id="group" class="input" required>
+                    <input type="number" asp-for="group" id="group" class="input" required>
                     <label for="">/10%</label>
                     <br><br>
 
                     <label for="">Quizzez:</label>
-                    <input type="number" name="quiz" id="quiz" class="input" required onkeypress="">
+                    <input type="number" asp-for="quiz" id="quiz" class="input" required onkeypress="">
                     <label for="">/10%</label>
                     <br><br>
 
                     <label for="">Exams:</label>
-                    <input type="number" name="exam" id="exam" class="input" required>
+                    <input type="number" asp-for="exam" id="exam" class="input" required>
                     <label for="">/20%</label>
                     <br><br>
 
                     <label for="">INTEX:</label>
-                    <input type="number" name="intex" id="intex" class="input" required>
+                    <input type="number" asp-for="intex" id="intex" class="input" required>
                     <label for="">/10%</label>
                     <br><br>
 
-                    <input type="button" id="btn1" value="CALCULATE"><br><br>
+                    <input type="submit" id="btn1" value="CALCULATE"><br><br>
                     <input type="button" id="resetbtn" value="RESET"><br><br>
+                    <div asp-validation-summary="All">
+
+                    </div>
                 </form>
             </div>
         </div>

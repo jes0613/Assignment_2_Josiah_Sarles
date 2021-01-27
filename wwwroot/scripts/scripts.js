@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-$("#btn1").click(function () {
+$("#btn1").click(function (e) {
     //Declares all variables
     let asCats = ["assignment", "group", "quiz", "exam", "intex"]
     let afVals = [];
@@ -15,12 +15,6 @@ $("#btn1").click(function () {
             afVals.push(parseInt(document.getElementById(asCats[i]).value));
             bItWorked = true;
         }
-        else {
-            alert("you must input a percentage for each of the grading categories!");
-            $("assignment").focus();
-            bItWorked = false;
-            i = asCats.length;
-        }
     }
 
     // if getting input from the user worked runs the rest of the program
@@ -34,6 +28,7 @@ $("#btn1").click(function () {
 
         //outputs the final precentage and letter grade for the user to view
         document.getElementById("results").innerHTML = "Your final percentage is " + fTotalGPA.toFixed(2) + " and your letter grade is " + sletGrade;
+        alert("Your final percentage is " + fTotalGPA.toFixed(2) + " and your letter grade is " + sletGrade);
     }
 });
 
