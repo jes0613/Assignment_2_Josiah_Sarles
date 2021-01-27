@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/styles.css" rel="stylesheet" />
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/scripts/scripts.js"></script>
+    <link rel="shortcut icon" href="img/Y-favicon.ico" />
+</head>
+<body>
+    <div class="header">
+
+    </div>
+    <a asp-controller="Home" asp-action="Index"><p class="header-text">JOSIAH</p></a>
+    <a asp-controller="Home" asp-action="Index"><p class="header-text2">Home</p></a>
+    <a asp-controller="Home" asp-action="Calc"><p class="header-text3">Calc</p></a>
+    <div class="bg-img">
+
+    </div>
+
+
+    @RenderBody()
+
+    <footer>
+    </footer>
+</body>
+</html>

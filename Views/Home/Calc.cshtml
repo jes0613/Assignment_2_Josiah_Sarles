@@ -1,0 +1,62 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Grade Calculator: IS 413";
+}
+<body onload="onLoad()">
+    <div class="content row">
+        <div class="column">
+            <div class="pad">
+
+            </div>
+        </div class="column">
+        <div class="column">
+            <div class="pad ex_pad">
+                <h2>Grade Calculator</h2>
+                <form>
+                    <label for="">Assignments:</label>
+                    <input type="number" name="assignment" id="assignment" class="input" required>
+                    <label for="">/50%</label>
+                    <br><br>
+
+                    <label for="">Group Projects:</label>
+                    <input type="number" name="group" id="group" class="input" required>
+                    <label for="">/10%</label>
+                    <br><br>
+
+                    <label for="">Quizzez:</label>
+                    <input type="number" name="quiz" id="quiz" class="input" required onkeypress="">
+                    <label for="">/10%</label>
+                    <br><br>
+
+                    <label for="">Exams:</label>
+                    <input type="number" name="exam" id="exam" class="input" required>
+                    <label for="">/20%</label>
+                    <br><br>
+
+                    <label for="">INTEX:</label>
+                    <input type="number" name="intex" id="intex" class="input" required>
+                    <label for="">/10%</label>
+                    <br><br>
+
+                    <input type="button" id="btn1" value="CALCULATE"><br><br>
+                    <input type="button" id="resetbtn" value="RESET"><br><br>
+                </form>
+            </div>
+        </div>
+        <div class="column">
+            <div class="pad">
+                <h2>GPA Results</h2>
+                <div>
+                    <svg height="100" width="100" id="svg" class="svg_center">
+                        <circle id="myCircle" cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="none"
+                                display="none" />
+                    </svg>
+                    <br>
+                    <p id="results" class="text_results"></p>
+                </div>
+            </div>
+        </div>
+     </div>
+</body>
